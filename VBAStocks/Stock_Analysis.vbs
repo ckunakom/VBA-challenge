@@ -94,23 +94,23 @@ Sub VBAChallenge()
                     ' Pull out the open stock price of the ticker in the next row
                     firsttickeropen = ws.Cells(i + 1, 3).Value
                     
-                        If yearlychange > 0 Then
-                        
-                            ' Set color variables
-                            Dim ColorRed As Integer
-                            ColorRed = 3
-                            Dim ColorGreen As Integer
-                            ColorGreen = 4
-                
-                            ' highlight positive change in green
-                            ws.Range("K" & summary).Interior.ColorIndex = ColorGreen
-                        
-                        ElseIf yearlychange < 0 Then
-                            
-                            ' highlight negative change in red.
-                            ws.Range("K" & summary).Interior.ColorIndex = ColorRed
+                    If yearlychange > 0 Then
                     
-                        End If
+                        ' Set color variables
+                        Dim ColorRed As Integer
+                        ColorRed = 3
+                        Dim ColorGreen As Integer
+                        ColorGreen = 4
+            
+                        ' highlight positive change in green
+                        ws.Range("K" & summary).Interior.ColorIndex = ColorGreen
+                    
+                    ElseIf yearlychange < 0 Then
+                        
+                        ' highlight negative change in red.
+                        ws.Range("K" & summary).Interior.ColorIndex = ColorRed
+                
+                    End If
                         
                     ' INSERT THE % CHANGE----------------------------------------
                     ' Print the yearly change  in the new summary table
